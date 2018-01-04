@@ -20,7 +20,7 @@
         }
       },
       mounted () {
-        this.$refs.signinBtn.addEventListener('click', e => {
+        this.$refs.signinBtn.addEventListener('click, touchstart', e => {
           window.FB.login(response => {
             this.$emit(response.authResponse ? 'success' : 'error', response)
           }, this.params)
